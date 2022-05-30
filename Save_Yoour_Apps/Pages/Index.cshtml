@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link  type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<div class="text-center">
+   
+    <h3 class="display-6">Добро пожаловать в приложение Save Your Apps</h3>
+     <h4 >Save Your Apps поможет вам в создании приложений и отслеживание запросов</h4>
+
+     <asp:Image runat=”server” ImageURL=”~/image/6d0071401c9d0571be992bed345ddd24.jpg”></asp:Image>
+
+    @if (HttpContext.User.Identity.IsAuthenticated)
+    {
+        <p>Количество созданных приложений: @Model.appsCount</p>
+    }
+
+     <iframe src="https://f.partnerkin.com/uploads/storage/files/file_1636465957.gif" width=800 height=600 frameBorder="0" allowFullScreen></iframe>
+</div>
+

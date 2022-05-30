@@ -1,0 +1,45 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
+namespace Save_Yoour_Apps.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult Apps()
+        {
+            return View();
+        }
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult AppDetailedStatistics()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+        
+        public IActionResult Register()
+        {
+            return View();
+        }
+        
+      
+    }
+}
